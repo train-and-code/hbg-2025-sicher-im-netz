@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sicher im Netz</title>
+    <!-- Das ist ein HTML Kommentar: 
+     Ein paar styles als Vorlage.
+     Überlegt euch, ob euch die bisherigen Farben, Abstände etc. so gefallen, oder ihr sie ändern wollt, es waren nur "Defaults".
+
+     Das Styling des hero-Bereichs (wo ist der, und was steht in ihm?) - 
+     sowie das Styling des main-Bereichs machen wir zusammen.
+    -->
+    <style>
+      /* definiert wie das body TAG gestyled wird */
+      body {
+        font-family: sans-serif; /* der font, die Schriftfamilie */
+        margin: 0; /* Außenabstand des Elements */
+        padding: 0; /* Innenabstand des Elements */
+      }
+      /* definiert wie das footer TAG gestyled wird */
+      footer {
+        background-color: #333; /* setzt Hintergrundfarbe des footers */
+        color: white; /* setzt Textfarbe des footers */
+        text-align: center; /* zentriert die Elemente im Footer */
+        padding: 1rem; /* Innenabstand, gerne testen, wenn man was anderes setzt */
+        font-size: 0.9rem; /* Die Schriftgröße, kann man statt in rem auch in px (z. B. 12px), oder pt (12pt) angeben */
+      }
+      /* definiert wie links (a) innerhalb des footer TAGs gestyled werden */
+      footer a {
+        color: #ddd; /* setzt Textfarbe von links im footer */
+        text-decoration: none; /* führt dazu, dass die Links im Footer nicht unterstrichen dargestellt werden */
+      }
+      /* definiert wie links (a) innerhalb des footer TAGs gestyled werden, 
+      wenn man mit der Maus über sie fährt (hover) */
+      footer a:hover {
+        text-decoration: underline; /* unterstreicht die Links nur beim hovern */
+      }
+
+      /* definiert wie das nav im header gestyled wird */
+      header nav {
+        background-color: #333;
+        color: white;
+        padding: 1rem;
+        display: flex; /* eine Möglichkeit ein flexibles Layout zu erreichen */
+        gap: 1rem; /* Abstand zwischen Elementen innerhalb von nav */
+      }
+
+      /* definiert wie links (a) im nav des header gestyled werden */
+      header nav a {
+        color: white;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- HEADER mit Navigation und Hero -->
+    <header>
+      <nav>
+        <a href="#">Home</a>
+        <a href="about.html">Über uns</a>
+      </nav>
+
+      <div class="hero">
+        <h1>Willkommen bei ?</h1>
+        <p>
+          Hier kann eine ganz kurze Beschreibung stehen, z. B. als Art
+          Untertitel.
+        </p>
+        <!-- ein button ist zum draufclicken da ;-) 
+         beim onclick wird hier ein kleines Javascript-Snippet ausgeführt, das die Seite nach unten zum Bereich der Projekte "scrollen" lässt.
+        -->
+        <button
+          class="cta-button"
+          onclick="document.getElementById('projekte').scrollIntoView({ behavior: 'smooth' })"
+        >
+          Zu den Projekten (?)
+        </button>
+      </div>
+    </header>
+
+    <!-- MAIN mit Erklärung und Projekten -->
+    <main>
+      <!-- sections gliedern unseren main-Bereich nur inhaltlich, wir können sie aber auch stylen -->
+      <section id="intro">
+        Hier könnte ein Intro-Text stehen, der etwas mehr sagt, vielleicht 2 - 3
+        kurze Sätze...
+      </section>
+
+      <!-- Hier könnten wir eure Projekte referenzieren, von den Cards müssten wir dann gemeinsam noch Links auf eure jeweiligen Projektseiten bauen. -->
+      <section id="projekte" class="container">
+        <div class="card">
+          <h2>Gruppe 1</h2>
+          <p>Projektbeschreibung von Gruppe 1.</p>
+        </div>
+        <div class="card">
+          <h2>Gruppe 2</h2>
+          <p>Projektbeschreibung von Gruppe 2.</p>
+        </div>
+        <div class="card">
+          <h2>Gruppe 3</h2>
+          <p>Projektbeschreibung von Gruppe 3.</p>
+        </div>
+        <!-- Weitere Karten können folgen -->
+      </section>
+    </main>
+    <footer>
+      <div class="footer-content">
+        © 2025 Schulprojekt Klasse 10 a/b · <a href="imprint.html">Impressum</a>
+      </div>
+    </footer>
+  </body>
+</html>
