@@ -3,30 +3,46 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sicher im Netz</title>
+    <title>Projektübersicht</title>
     <!-- Das ist ein HTML Kommentar: 
-     Ein paar styles als Vorlage.
-     Überlegt euch, ob euch die bisherigen Farben, Abstände etc. so gefallen, oder ihr sie ändern wollt, es waren nur "Defaults".
-
-     Das Styling des hero-Bereichs (wo ist der, und was steht in ihm?) - 
-     sowie das Styling des main-Bereichs machen wir zusammen.
-    -->
+    Hier werden Styles für den Aufbau und das Aussehen der Seite definiert.
+    Fragt euch: Passen diese Werte für Farben, Abstände und Schriftart? -->
     <style>
-      /* definiert wie das body TAG gestyled wird */
+      /* definiert wie das body TAG gestyled wird: Schriftart, Abstände, etc. */
       body {
-        font-family: sans-serif; /* der font, die Schriftfamilie */
-        margin: 0; /* Außenabstand des Elements */
-        padding: 0; /* Innenabstand des Elements */
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
       }
-      /* definiert wie das footer TAG gestyled wird */
+      /* definiert wie das footer TAG gestyled wird: Textfarbe, Abstand und Hintergrundfarbe */
       footer {
-        background-color: #28922c; /* setzt Hintergrundfarbe des footers */
-        color: white; /* setzt Textfarbe des footers */
-        text-align: center; /* zentriert die Elemente im Footer */
-        padding: 1rem; /* Innenabstand, gerne testen, wenn man was anderes setzt */
-        font-size: 0.9rem; /* Die Schriftgröße, kann man statt in rem auch in px (z. B. 12px), oder pt (12pt) angeben */
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 1rem;
+        font-size: 0.9rem;
       }
-
+      /* Links im Footer werden ohne Unterstreichung dargestellt, bis sie gehovt werden */
+      footer a {
+        color: #ddd;
+        text-decoration: none;
+      }
+      footer a:hover {
+        text-decoration: underline;
+      }
+      /* Navigation im Header, flexibles Layout durch flexbox, Abstände durch gap */
+      header nav {
+        background-color: #333;
+        color: white;
+        padding: 1rem;
+        display: flex;
+        gap: 1rem;
+      }
+      header nav a {
+        color: white;
+        text-decoration: none;
+      }
+      /* Hero Bereich für den Header */
       .hero {
         position: relative;
         height: 100vh;
@@ -41,7 +57,6 @@
         text-align: center;
         padding: 2rem;
       }
-
       .hero::before {
         content: "";
         position: absolute;
@@ -50,34 +65,60 @@
         width: 100%;
         height: 100%;
         background: rgba(0, 0, 0, 0.5);
-        -webkit-backdrop-filter: blur(2px);
         backdrop-filter: blur(2px);
         z-index: 1;
       }
-      /* definiert wie links (a) innerhalb des footer TAGs gestyled werden */
-      footer a {
-        color: #ddd; /* setzt Textfarbe von links im footer */
-        text-decoration: none; /* führt dazu, dass die Links im Footer nicht unterstrichen dargestellt werden */
+      .hero h1,
+      .hero p,
+      .cta-button {
+        position: relative;
+        z-index: 2;
       }
-      /* definiert wie links (a) innerhalb des footer TAGs gestyled werden, 
-      wenn man mit der Maus über sie fährt (hover) */
-      footer a:hover {
-        text-decoration: underline; /* unterstreicht die Links nur beim hovern */
+      .cta-button {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+        border: none;
+        background-color: white;
+        color: #333;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
       }
-
-      /* definiert wie das nav im header gestyled wird */
-      header nav {
-        background-color: #333;
-        color: white;
+      .cta-button:hover {
+        background-color: #ddd;
+      }
+      main {
+        padding: 2rem;
+      }
+      .explanation {
+        background-color: #eef;
         padding: 1rem;
-        display: flex; /* eine Möglichkeit ein flexibles Layout zu erreichen */
-        gap: 1rem; /* Abstand zwischen Elementen innerhalb von nav */
+        margin-bottom: 2rem;
+        border-left: 5px solid #88c;
       }
-
-      /* definiert wie links (a) im nav des header gestyled werden */
-      header nav a {
-        color: white;
-        text-decoration: none;
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+      }
+      .card {
+        background-color: #f5f5f5;
+        border-radius: 8px;
+        padding: 1rem;
+        width: 250px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      #projekte {
+        scroll-margin-top: 100px;
+      }
+      @media (max-width: 600px) {
+        .hero h1 {
+          font-size: 2rem;
+        }
+        .hero p {
+          font-size: 1rem;
+        }
       }
     </style>
   </head>
@@ -86,36 +127,38 @@
     <header>
       <nav>
         <a href="#">Home</a>
-        <a href="about.html">Über uns</a>
+        <a href="#">Über uns</a>
+        <a href="#">Kontakt</a>
       </nav>
-
       <div class="hero">
-        <h1>Willkommen bei ?</h1>
+        <h1>Willkommen bei unserem Schulprojekt</h1>
         <p>
-          Hier kann eine ganz kurze Beschreibung stehen, z. B. als Art
-          Untertitel.
+          Hier stellen wir unsere Gruppenarbeiten vor – kreativ, engagiert und
+          digital.
         </p>
-        <!-- ein button ist zum draufclicken da ;-) 
-         beim onclick wird hier ein kleines Javascript-Snippet ausgeführt, das die Seite nach unten zum Bereich der Projekte "scrollen" lässt.
-        -->
         <button
           class="cta-button"
           onclick="document.getElementById('projekte').scrollIntoView({ behavior: 'smooth' })"
         >
-          Zu den Projekten (?)
+          Zu den Projekten
         </button>
       </div>
     </header>
-
     <!-- MAIN mit Erklärung und Projekten -->
     <main>
-      <!-- sections gliedern unseren main-Bereich nur inhaltlich, wir können sie aber auch stylen -->
-      <section id="intro">
-        Hier könnte ein Intro-Text stehen, der etwas mehr sagt, vielleicht 2 - 3
-        kurze Sätze...
+      <section class="explanation">
+        <h2>Was ist ein Flex-Layout (Flexbox)?</h2>
+        <p>
+          Flexbox hilft uns, Elemente flexibel nebeneinander oder untereinander
+          anzuordnen. Hier sortiert der Container die Projekt-Karten in einer
+          Reihe und bricht sie bei Bedarf um.
+        </p>
+        <p>
+          Mit <code>display: flex</code>, <code>gap</code>,
+          <code>flex-wrap</code> und <code>justify-content</code> erreichen wir
+          ein flexibles, responsives Layout für unsere Karten.
+        </p>
       </section>
-
-      <!-- Hier könnten wir eure Projekte referenzieren, von den Cards müssten wir dann gemeinsam noch Links auf eure jeweiligen Projektseiten bauen. -->
       <section id="projekte" class="container">
         <div class="card">
           <h2>Gruppe 1</h2>
@@ -129,12 +172,11 @@
           <h2>Gruppe 3</h2>
           <p>Projektbeschreibung von Gruppe 3.</p>
         </div>
-        <!-- Weitere Karten können folgen -->
       </section>
     </main>
     <footer>
       <div class="footer-content">
-        © 2025 Schulprojekt Klasse 10 a/b · <a href="imprint.html">Impressum</a>
+        © 2025 Schulprojekt Klasse 10 a/b · <a href="#">Impressum</a>
       </div>
     </footer>
   </body>
