@@ -20,11 +20,39 @@
       }
       /* definiert wie das footer TAG gestyled wird */
       footer {
-        background-color: #333; /* setzt Hintergrundfarbe des footers */
+        background-color: #28922c; /* setzt Hintergrundfarbe des footers */
         color: white; /* setzt Textfarbe des footers */
         text-align: center; /* zentriert die Elemente im Footer */
         padding: 1rem; /* Innenabstand, gerne testen, wenn man was anderes setzt */
         font-size: 0.9rem; /* Die Schriftgröße, kann man statt in rem auch in px (z. B. 12px), oder pt (12pt) angeben */
+      }
+
+      .hero {
+        position: relative;
+        height: 100vh;
+        background-image: url("https://source.unsplash.com/1600x900/?education,school");
+        background-size: cover;
+        background-position: center;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 2rem;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        -webkit-backdrop-filter: blur(2px);
+        backdrop-filter: blur(2px);
+        z-index: 1;
       }
       /* definiert wie links (a) innerhalb des footer TAGs gestyled werden */
       footer a {
