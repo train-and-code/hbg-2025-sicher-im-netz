@@ -1,134 +1,195 @@
 <!DOCTYPE html>
 <html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Phishing</title>
-</head>
-<style>
-    header a{
-        text-decoration: none;
-        color: black;
-        font-family: sans-serif;
-        font-weight: bold;
-        font-size:larger;
-
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <style>
+    header .card {
+      text-decoration: none;
+      color: black;
+      font-family: sans-serif;
+      font-weight: bold;
+      font-size: larger;
     }
 
-    body a{
-        font-family: sans-serif;
-        text-decoration: none;
-        color: black;
-        font-weight: bold;
-        
+    #phishing body a {
+      font-family: sans-serif;
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
     }
-    .card {
-        background-color: beige;
-        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-        transition: 0.3s;
-        border-radius: 6%;
+    #phishing .card {
+      background-color: beige;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      transition: 0.3s;
+      border-radius: 6%;
+      margin: auto;
+      margin-top: 2rem;
     }
-    .card:hover {
-        box-shadow: 0 30px 40px 0 rgba(0, 221, 255, 0.2);
-        lighting-color: aqua;
+    #phishing .card:hover {
+      box-shadow: 0 30px 40px 0 rgba(0, 221, 255, 0.2);
+      lighting-color: aqua;
     }
 
-    .container {
-        padding: 2px 16px;
+    #phishing .container {
+      padding: 2px 16px;
     }
     .collapsible {
-        background-color: rgb(175, 189, 185);
-        color: #111010;
-        cursor: pointer;
-        padding: 18px;
-        width: 100%;
-        border: none;
-        text-align: left;
-        outline: none;
-        font-size: 15px;
+      background-color: rgb(175, 189, 185);
+      color: #111010;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
     }
-    .active, .collapsible:hover {
-        background-color: #ccc;
+    .active,
+    .collapsible:hover {
+      background-color: #ccc;
     }
     .content {
-        padding: 0 18px;
-        display: none;
-        overflow: hidden;
-        background-color: #f1f1f1;
+      padding: 0 18px;
+      display: none;
+      overflow: hidden;
+      background-color: #f1f1f1;
     }
-    body{
-        background-color: rgb(175, 189, 185);
-        text-align: center;
+    #phishing body {
+      background-color: rgb(175, 189, 185);
+      text-align: center;
     }
-    button{
-        font-family: sans-serif;
-        font-weight: bold;
-        color: black;
-        background-color:blanchedalmond;
-        border-radius: 20px;
-        padding: 1em; 
+    button {
+      font-family: sans-serif;
+      font-weight: bold;
+      color: black;
+      background-color: blanchedalmond;
+      border-radius: 20px;
+      padding: 1em;
     }
-    button:hover{
-        box-shadow: 0 30px 40px 0 rgba(0, 221, 255, 0.2);
-        lighting-color: aqua;
+    button:hover {
+      box-shadow: 0 30px 40px 0 rgba(0, 221, 255, 0.2);
+      lighting-color: aqua;
     }
-</style>
 
-<header style="text-align: center; margin: auto; width: 500px;">
-    <div class="card" style="padding: 1em; border-radius: 20px;">
-        <a>Phishing und wie man sich davor schützt</a>           
-    </div>
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
 
-</header>
-<body>
-   <br><br><br><br>
-   <a>
-    <div class="card" style="width: 300px; margin: auto;">
-        <br>
-        <img src="data:image/png;base64,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" alt="Avatar" style="width:300; height: 200px;">
-        <div class="container">
-          <button type="button" class="collapsible" style="text-align: center;">Was ist Phishing?</button>
-          <div class="content">
-            <p>Phishing ist sehr oft in Emails vertreten. Hierbei werden Emails, von angeblichen großen Firmen, wie z.B. Amazon, die häufig nach einer Passwortzurücksetzung fragen, Opfer der Phishing-Email gesendet. Hierbei wird gehofft, dass die Nutzer, bzw. die Opfer der Phishing-Email, die E-Mail nicht als Betrug enttarnen und seine Persönliche Daten wie Passwörter eingeben. Mit diesen Passwörtern, können die Verfasser der Phishing-Email sehr viele weitere Persönliche Daten bis hin zu Daten von den Bankkonten der Opfer erlangen. Doch nicht nur der Stereotyp, ältere Menschen die keine Ahnung vom Internet haben, fallen auf diese Phishing Emails herein. Auch Kinder, Teenager, Erwachsene und Internet-Experten von Politikern fallen auf diesen Scam herein. Ein häufig genutztes Beispiel für die fatalen Folgen von Phishing-Emails ist die Präsidentschaftswahl in Amerika 2016. Hier trat Clinton gegen Trump an, und das PR-Team von Clinton bekam eine verdächtig aussehende Email. Diese, die eigentlich im Internet solche Phishing-Emails sofort enttarnen sollten, viel die E-Mail nicht als gefälscht auf und gaben persönliche Daten wie Passwörter ein. Dadurch konnten die Scammer Persönliche Daten wie Emails von Clinton veröffentlichen, was ihr möglicherweise die Wahl kostete. Damit euch das nicht passiert, haben wir hier unsere besten Tipps, um sich vor diesen E-Mails zu schützen. </p>
-          </div>
-        </div>
-        <div class="container">
-            <button type="button" class="collapsible" style="text-align: center;">Wie schütze ich mich vor Phishing?</button>
-            <div class="content">
-                <p>Es gibt viele Möglichkeiten, sich vor Phishing zu schützen. Hier sind unsere Top 5 Tipps:</p>
-                <ol style="text-align: center;">
-                    <li>Sei misstrauisch gegenüber E-Mails, die nach persönlichen Informationen fragen.</li>
-                    <li>Überprüfe die Absenderadresse.</li>
-                    <li>Klicke nicht auf Links in verdächtigen E-Mails.</li>
-                    <li>Verwende eine Antiviren-Software und halte sie aktuell.</li>
-                    <li>Aktiviere die Zwei-Faktor-Authentifizierung, wo immer möglich.</li>
-                </ol>
-        </div>
-      </div> 
-      <br>
+  <body id="phishing">
+    <header>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="online_profiling.html">Online-Profiling</a>
+        <a href="phishing.html">Phishing</a>
+        <a href="fake_news.html">Fake News</a>
+        <a href="imprint.html">Impressum</a>
+      </nav>
+      <div class="card" style="padding: 1em; border-radius: 20px">
+        Phishing und wie man sich davor schützt
       </div>
-    </a> 
-    <br> 
-    <a href="index.html">
-    <button>
-        Hier geht's zurück zur Startseite
-    </button> 
-    </a>
-</body>
-<script>
+    </header>
+    <main>
+      <br /><br /><br /><br />
+      <a>
+        <div class="card" style="width: 300px; margin: auto">
+          <br />
+          <img
+            src="data:image/png;base64,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"
+            alt="Avatar"
+            style="width: 300; height: 200px"
+          />
+          <div class="container">
+            <button
+              type="button"
+              class="collapsible"
+              style="text-align: center"
+            >
+              Was ist Phishing?
+            </button>
+            <div class="content">
+              <p>
+                Phishing ist sehr oft in Emails vertreten. Hierbei werden
+                Emails, von angeblichen großen Firmen, wie z.B. Amazon, die
+                häufig nach einer Passwortzurücksetzung fragen, Opfer der
+                Phishing-Email gesendet. Hierbei wird gehofft, dass die Nutzer,
+                bzw. die Opfer der Phishing-Email, die E-Mail nicht als Betrug
+                enttarnen und seine Persönliche Daten wie Passwörter eingeben.
+                Mit diesen Passwörtern, können die Verfasser der Phishing-Email
+                sehr viele weitere Persönliche Daten bis hin zu Daten von den
+                Bankkonten der Opfer erlangen. Doch nicht nur der Stereotyp,
+                ältere Menschen die keine Ahnung vom Internet haben, fallen auf
+                diese Phishing Emails herein. Auch Kinder, Teenager, Erwachsene
+                und Internet-Experten von Politikern fallen auf diesen Scam
+                herein. Ein häufig genutztes Beispiel für die fatalen Folgen von
+                Phishing-Emails ist die Präsidentschaftswahl in Amerika 2016.
+                Hier trat Clinton gegen Trump an, und das PR-Team von Clinton
+                bekam eine verdächtig aussehende Email. Diese, die eigentlich im
+                Internet solche Phishing-Emails sofort enttarnen sollten, viel
+                die E-Mail nicht als gefälscht auf und gaben persönliche Daten
+                wie Passwörter ein. Dadurch konnten die Scammer Persönliche
+                Daten wie Emails von Clinton veröffentlichen, was ihr
+                möglicherweise die Wahl kostete. Damit euch das nicht passiert,
+                haben wir hier unsere besten Tipps, um sich vor diesen E-Mails
+                zu schützen.
+              </p>
+            </div>
+          </div>
+          <div class="container">
+            <button
+              type="button"
+              class="collapsible"
+              style="text-align: center"
+            >
+              Wie schütze ich mich vor Phishing?
+            </button>
+            <div class="content">
+              <p>
+                Es gibt viele Möglichkeiten, sich vor Phishing zu schützen. Hier
+                sind unsere Top 5 Tipps:
+              </p>
+              <ol style="text-align: center">
+                <li>
+                  Sei misstrauisch gegenüber E-Mails, die nach persönlichen
+                  Informationen fragen.
+                </li>
+                <li>Überprüfe die Absenderadresse.</li>
+                <li>Klicke nicht auf Links in verdächtigen E-Mails.</li>
+                <li>Verwende eine Antiviren-Software und halte sie aktuell.</li>
+                <li>
+                  Aktiviere die Zwei-Faktor-Authentifizierung, wo immer möglich.
+                </li>
+              </ol>
+            </div>
+          </div>
+          <br />
+        </div>
+      </a>
+    </main>
+    <footer>
+      <div class="footer-content">© 2025 Schulprojekt Klasse 10 a/b</div>
+    </footer>
+  </body>
+  <script>
     var coll = document.getElementsByClassName("collapsible");
-var i;
+    var i;
 
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.display === "block") {
-      content.style.display = "none";
-    } else {
-      content.style.display = "block";
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
     }
-  });
-}
-</script>
+  </script>
 </html>

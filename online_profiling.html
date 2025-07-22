@@ -1,7 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
   <head>
-    <title>online profiling</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Profiling</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
     span{
         font-weight: 600;
@@ -25,19 +28,13 @@
         text-decoration: none;
         color: white;
     }
-    footer {
-        background-color: #333; /* setzt Hintergrundfarbe des footers */
-        color: rgb(255, 255, 255); /* setzt Textfarbe des footers */
-        text-align: center; /* zentriert die Elemente im Footer */
-        padding: 1rem; /* Innenabstand, gerne testen, wenn man was anderes setzt */
-        font-size: 0.9rem; /* Die Schriftgröße, kann man statt in rem auch in px (z. B. 12px), oder pt (12pt) angeben */
-        
-      }
+
       .flex-container{
         display: flex;
         flex-wrap: wrap;
         margin-top: 2em;
         margin-bottom: 2em;
+        justify-content: center;
       }
       .center{
         text-align: center;
@@ -86,13 +83,18 @@
       }
 
     </style>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">Über uns</a>
-      <a href="#">Kontakt</a>
-    </nav>
   </head>
   <body>
+    <header>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="online_profiling.html">Online-Profiling</a>
+         <a href="phishing.html">Phishing</a>
+         <a href="fake_news.html">Fake News</a>
+         <a href="imprint.html">Impressum</a>
+      </nav>
+      </header>
+      <main>
     <div class="wrapper">
     <h1 class="center">Online Profiling</h1>
     <p class="paragrapheins">Fast überall im Internet hinterlassen wir Spuren <br> ob beim <span>Streamen, Chatten oder Shoppen</span>. </p>
@@ -295,10 +297,12 @@
     </ul>
 
     </div>
-  </body>
-  <footer>
+    </main>
+    <footer>
     <div class="footer-content">
-      © 2025 Schulprojekt Klasse 10 a/b · <a href="imprint.html">Impressum</a>
+      © 2025 Schulprojekt Klasse 10 a/b
     </div>
   </footer>
+  </body>
+  
 </html>
