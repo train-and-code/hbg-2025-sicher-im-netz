@@ -7,176 +7,64 @@
     <!-- Das ist ein HTML Kommentar: 
     Hier werden Styles für den Aufbau und das Aussehen der Seite definiert.
     Fragt euch: Passen diese Werte für Farben, Abstände und Schriftart? -->
-    <style>
-      /* definiert wie das body TAG gestyled wird: Schriftart, Abstände, etc. */
-      body {
-        font-family: sans-serif;
-        margin: 0;
-        padding: 0;
-      }
-      /* definiert wie das footer TAG gestyled wird: Textfarbe, Abstand und Hintergrundfarbe */
-      footer {
-        background-color: #333;
-        color: white;
-        text-align: center;
-        padding: 1rem;
-        font-size: 0.9rem;
-      }
-      /* Links im Footer werden ohne Unterstreichung dargestellt, bis sie gehovt werden */
-      footer a {
-        color: #ddd;
-        text-decoration: none;
-      }
-      footer a:hover {
-        text-decoration: underline;
-      }
-      /* Navigation im Header, flexibles Layout durch flexbox, Abstände durch gap */
-      header nav {
-        background-color: #333;
-        color: white;
-        padding: 1rem;
-        display: flex;
-        gap: 1rem;
-      }
-      header nav a {
-        color: white;
-        text-decoration: none;
-      }
-      /* Hero Bereich für den Header */
-      .hero {
-        position: relative;
-        height: 100vh;
-        background-image: url("https://source.unsplash.com/1600x900/?education,school");
-        background-size: cover;
-        background-position: center;
-        color: white;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        padding: 2rem;
-      }
-      .hero::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5);
-        backdrop-filter: blur(2px);
-        z-index: 1;
-      }
-      .hero h1,
-      .hero p,
-      .cta-button {
-        position: relative;
-        z-index: 2;
-      }
-      .cta-button {
-        padding: 0.75rem 1.5rem;
-        font-size: 1rem;
-        border: none;
-        background-color: white;
-        color: #333;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-      }
-      .cta-button:hover {
-        background-color: #ddd;
-      }
-      main {
-        padding: 2rem;
-      }
-      .explanation {
-        background-color: #eef;
-        padding: 1rem;
-        margin-bottom: 2rem;
-        border-left: 5px solid #88c;
-      }
-      .container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1rem;
-        justify-content: center;
-      }
-      .card {
-        background-color: #f5f5f5;
-        border-radius: 8px;
-        padding: 1rem;
-        width: 250px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      }
-      #projekte {
-        scroll-margin-top: 100px;
-      }
-      @media (max-width: 600px) {
-        .hero h1 {
-          font-size: 2rem;
-        }
-        .hero p {
-          font-size: 1rem;
-        }
-      }
-    </style>
+    
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <!-- HEADER mit Navigation und Hero -->
     <header>
       <nav>
         <a href="#">Home</a>
-        <a href="#">Über uns</a>
-        <a href="#">Kontakt</a>
+        <a href="online_profiling.html">Online-Profiling</a>
+         <a href="phishing.html">Phishing</a>
+         <a href="fake_news.html">Fake News</a>
+         <a href="imprint.html">Impressum</a>
       </nav>
       <div class="hero">
-        <h1>Willkommen bei unserem Schulprojekt</h1>
+        <h1>Willkommen bei Sicher-im-Netz</h1>
         <p>
-          Hier stellen wir unsere Gruppenarbeiten vor – kreativ, engagiert und
-          digital.
+          Weißt du, worauf du im Internet achten solltest, um sicher zu sein?
         </p>
         <button
           class="cta-button"
           onclick="document.getElementById('projekte').scrollIntoView({ behavior: 'smooth' })"
         >
-          Zu den Projekten
+          Erfahre etwas darüber!
         </button>
       </div>
     </header>
-    <!-- MAIN mit Erklärung und Projekten -->
-    <main>
+
+    <main id="home">
       <section class="explanation">
-        <h2>Was ist ein Flex-Layout (Flexbox)?</h2>
+        <h2>Über uns</h2>
         <p>
-          Flexbox hilft uns, Elemente flexibel nebeneinander oder untereinander
-          anzuordnen. Hier sortiert der Container die Projekt-Karten in einer
-          Reihe und bricht sie bei Bedarf um.
+          Diese Website ist von der 10.Klasse des HBGs Karlsruhe entwickelt
+          worden.
         </p>
         <p>
-          Mit <code>display: flex</code>, <code>gap</code>,
-          <code>flex-wrap</code> und <code>justify-content</code> erreichen wir
-          ein flexibles, responsives Layout für unsere Karten.
+          Hier klären wir euch über verschiedene Sicherheitsaspekte im Internet
+          auf.
         </p>
       </section>
       <section id="projekte" class="container">
-        <div class="card">
-          <h2>Gruppe 1</h2>
-          <p>Projektbeschreibung von Gruppe 1.</p>
-        </div>
-        <div class="card">
-          <h2>Gruppe 2</h2>
-          <p>Projektbeschreibung von Gruppe 2.</p>
-        </div>
-        <div class="card">
-          <h2>Gruppe 3</h2>
-          <p>Projektbeschreibung von Gruppe 3.</p>
-        </div>
+        <a href="online_profiling.html"card">
+          <h2>Online Profiling</h2>
+          <p>Wie funktioniert Online Profiling?</p>
+        </div></a>
+        <a href="phishing.html"><div class="card">
+          <h2>Phishing</h2>
+          <p>Was ist Phishing?</p>
+        </div></a>
+        <a href="fake_news.html"card">
+          <h2>Fake News</h2>
+          <p>Wie könnt ihr Fake News besser erkennen?</p>
+        </div></a>
+
       </section>
     </main>
     <footer>
       <div class="footer-content">
-        © 2025 Schulprojekt Klasse 10 a/b · <a href="#">Impressum</a>
+        © 2025 Schulprojekt Klasse 10 a/b · <a href="imprint.html">Impressum</a>
       </div>
     </footer>
   </body>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+ <html lang="de">
+   <head>
+     <meta charset="UTF-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <title>Artikel zu Fake News</title>
+     <link rel="stylesheet" href="styles.css">
+     <style>
+
+       /* Hero Bereich für den Header */
+       .hero {
+         position: relative;
+         height: 100vh;
+         background-size: cover;
+         background-position: center;
+         color: rgb(125, 140, 207);
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         padding: 2rem;
+       }
+
+       .cta-button {
+         background-color: #dc80b7;
+         color:#000003;
+         line-height: 3;
+       }
+  
+       .cta-button:hover {
+         background-color: #f9fcf9;
+         color: #3e29b8;
+       }
+
+       .explanation {
+         border-left: 5px solid rgb(12, 12, 238);
+       }
+
+       .card {
+         background-color: #d37eae;
+         line-height:0,2;
+       }
+  
+       .cardgroßßß{
+         background-color: #8db1d1;
+         color: white;
+         padding: 1rem;
+         display: flex;
+         gap: 1rem;
+      
+       }
+      
+       .cardgroßßß.hover{
+         background-color: #4991d0;
+         border-radius: 400px;
+         color: rgb(73, 73, 211);
+         padding: 1rem;
+         display: flex;
+         gap: 1rem;
+    
+       }
+  
+       .box{
+         background-color: #8db1d1;
+         color: white;
+         padding: 1rem;
+         display: flex;
+         gap: 1rem;
+       }
+  
+       .boxi{
+         background-color: #d57cc4;
+         color: white;
+         padding: 1rem;
+         display: flex;
+         gap: 1rem;
+         justify-content: center;
+       }
+  
+       .cardgrzwei{
+         background-color: #8db1d1;
+         color: white;
+         padding: 1rem;
+         display: flex;
+         gap: 1rem;
+        
+       }
+       .fixlength{
+         width: 200px;
+       }
+       .cardi {
+         background-color: #d37eae;
+         border-radius: 8px;
+         padding: 1rem;
+         width: 250px;
+         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+         line-height:0,2;
+       }
+  
+       .cardi:hover {
+         background-color: #b41e73;
+         border-radius: 150px;
+         padding: 2rem;
+         width: 250px;
+         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+         line-height:0,2;
+       }
+  
+       .list {
+         background-color: #8594cb;
+         border-radius: 8px;
+         padding: 1rem;
+         width: 250px;
+         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+       }
+       .list:hover {
+         background-color: #3a55b8;
+         border-radius: 400px;
+         padding: 1rem;
+         width: 250px;
+         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+       }
+       .list:hover > * {
+        padding:1em;
+       }
+       .listi {
+         background-color: #8594cb;
+         border-radius: 8px;
+         padding: 1rem;
+         width: 250px;
+         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+       }
+       .listi:hover {
+         background-color: #3a55b8;
+         border-radius: 150px;
+         padding: 1rem;
+         width: 250px;
+         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+       }
+
+       
+     </style>
+   </head>
+   <body>
+     <!-- HEADER mit Navigation und Hero -->
+     <header>
+       <nav>
+         <a href="index.html">Home</a>
+        <a href="online_profiling.html">Online-Profiling</a>
+         <a href="phishing.html">Phishing</a>
+         <a href="fake_news.html">Fake News</a>
+         <a href="imprint.html">Impressum</a>
+       </nav>
+       <div class="hero">
+        
+         <h1>Hallo und Herzlich Willkommen
+           <br>
+           bei unserer Fake News Website!</h1>
+        
+           <button
+           class="cta-button"
+           onclick="document.getElementById('Allgemein').scrollIntoView({ behavior: 'smooth' })"
+         >
+           Ich bin zum ersten Mal auf dieser Website
+         </button>
+         <br>
+         <br><br><br>
+  
+         <button
+           class="cta-button"
+           onclick="document.getElementById('Quiz').scrollIntoView({ behavior: 'smooth' })"
+         >
+           Kannst du die Fake News erkennen?
+         </button>
+         <br> <br> <br><br>
+  
+         <button
+           class="cta-button"
+           onclick="document.getElementById('projekte').scrollIntoView({ behavior: 'smooth' })"
+         >
+           Mehr über Fake News erfahren
+         </button>
+         <br><br> <br><br>
+  
+         <button
+           class="cta-button"
+           onclick="document.getElementById('Erklärungen').scrollIntoView({ behavior: 'smooth' })"
+         >
+         Wie du sie erkennen kannst
+         </button>
+       </div>
+     </header>
+  
+  
+     <main>
+       <section  id="Allgemein" class="box">
+         <div class="boxi">
+         <h1 class="fixlength">Über uns und unsere Motivation.
+         </h1><br>
+          <p>Wir sind 5 Schülerinnen und mit dieser Webisite wollen wir die die Gefahren von Fake News näher bringen.
+            Wir haben uns entschieden, eine Website über Fake News zu machen, weil man im Internet viele falsche Informationen findet.
+           Gerade auf TikTok, Instagram oder anderen Plattformen werden  Mengen an Fake News absichtlich verbreitet,
+            ohne dass man es merkt. Uns geht es darum, anderen zu zeigen, wie man Fake News erkennt und warum es wichtig ist,
+            nicht alles sofort zu glauben. So wollen wir uns informieren für unser Informatik Projekt und euch hilft es bestimmt auch.
+            <br>
+            <br><br>
+  
+          </p>
+       </section>
+       <section class="box">
+         <div class="boxi">
+           <h1 class="fixlength">Die Inhalte unsere Website.
+         </h1><br>
+         <br><br>
+          <p>
+           Wir haben ein paar Dinge für euch vorbereitet rund um das Thema Fake News.
+           Wen du ein bisschen weiter scrollst findest du ein Quiz in welchem du schauen kannst ob du Fake News erkennst. und dann gibt es noch eine Menge anderer Dinge.
+          </p>
+       </section>
+  
+       <br>
+      
+  
+       <section class="box">
+         <div class="box">
+          <h2> Fake or fact? - Erkennst du die Fake News?
+          </h2>
+       </section>
+       <br>
+       <br><br>
+  
+       <section id="Quiz" class="container">
+         <div class="card">
+         <a href="https://forms.gle/TEtwkXE95JvZqU1x7" target="_blank"> <h2> Hier geht es zum Quiz</h2></a>
+       </section>
+       <br><br><br>
+  
+      
+  
+  
+       <section class="box">
+         <div class="box">
+          <h2> Was sind Fake News?
+          </h2>
+       </section>
+       <br>
+  
+       <br><br>
+      
+  
+       <section id="projekte" class="container">
+         <div class="cardi">
+           <h2>Falschmeldungen, die erstellt werden um gezielt zu täuschen</h2>
+         </div>
+         <div class="cardi">
+           <h2>Haben die Absicht, Meinungen zu manipulieren</h2>
+         </div>
+         <div class="cardi">
+           <h2>Wollen Angst verbreiten oder Vertrauen zu bestimmten Instituten brechen.</h2>
+         </div>
+       </section>
+  
+       <br><br><br>
+  
+       <section class="box">
+         <div class="box">
+          <h2> Einfache Fragen um Fake News aufzudecken
+         </h2>
+       </section>
+  
+  
+       <br>
+        <section id="Erklärungen" class="container">
+         <div class="list">
+           <div class="cardgroßßß">
+             Einfache Fragen um Fake News aufzudecken
+  
+         <p></p>
+  
+         <br>
+         <section id="Erklärungen" class="container">
+           <div class="list">
+             <h2>1</h2>
+             <p>Wer ist die Quelle? ->seriös oder unbekannt.</p>
+           </div>
+           <br>
+          
+           <div class="list">
+             <h2>2</h2>
+             <p>Gibt es Belege? -> Quellen und Studien oder nichts.</p>
+           </div>
+           <br>
+          
+           <div class="list">
+             <h2>3</h2>
+             <p>Nachricht alt oder neu? ->veraltet aus dem Zusammenhang gerissen oder neu </p>
+           </div>
+           <br>
+  
+           <div class="list">
+             <h2>4</h2>
+             <p>Kritisch denken ->kann das überhaupt der Realität entsprechen?
+             </p>
+           </div>
+           <br>
+          
+         </section>
+  
+    
+     </main>
+     <footer>
+       <div class="footer-content">
+         © 2025 Schulprojekt Klasse 10 a/b · <a href="#">Impressum</a>
+       </div>
+     </footer>
+   </body>
+ </html>
+

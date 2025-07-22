@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>online profiling</title>
+    <style>
+    span{
+        font-weight: 600;
+    }
+    body{
+        background-color: #ddd;
+    }
+    .wrapper{
+        max-width: 890px;
+        margin:auto;
+    }
+    .paragraph{
+      font-family: Helvetica, sans-serif;
+    }
+    .paragrapheins{
+      font-family: Helvetica, sans-serif;
+      font-size: x-large;
+      text-align: center;
+    }
+    .rick a {
+        text-decoration: none;
+        color: white;
+    }
+    footer {
+        background-color: #333; /* setzt Hintergrundfarbe des footers */
+        color: rgb(255, 255, 255); /* setzt Textfarbe des footers */
+        text-align: center; /* zentriert die Elemente im Footer */
+        padding: 1rem; /* Innenabstand, gerne testen, wenn man was anderes setzt */
+        font-size: 0.9rem; /* Die Schriftgröße, kann man statt in rem auch in px (z. B. 12px), oder pt (12pt) angeben */
+        
+      }
+      .flex-container{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 2em;
+        margin-bottom: 2em;
+      }
+      .center{
+        text-align: center;
+        font-family: Helvetica, sans-serif;
+      }
+      .box {
+      background-color: transparent;
+      width: 220px;
+      height: 300px;
+      border: 1px solid #ddd;
+      perspective: 1000px;
+      min-width: 200px;
+      }
+      .box-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.5s;
+      transform-style: preserve-3d;
+      min-width: 200px;
+      }
+      .box:hover .box-inner {
+      transform: rotateY(180deg);
+      }
+      .box-front, .box-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden
+      }
+      .box-front {
+      background-color: #6d7d91;
+      color: white;
+      }
+      .box-back {
+      background-color: #828f9e;
+      color: #eeee;
+      transform: rotateY(180deg);
+      }
+
+      @media (hover: none) {
+        .box:hover .box-inner {
+      transform: rotateY(180deg);
+      }
+      }
+
+    </style>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Über uns</a>
+      <a href="#">Kontakt</a>
+    </nav>
+  </head>
+  <body>
+    <div class="wrapper">
+    <h1 class="center">Online Profiling</h1>
+    <p class="paragrapheins">Fast überall im Internet hinterlassen wir Spuren <br> ob beim <span>Streamen, Chatten oder Shoppen</span>. </p>
+    <p class="paragraph"><span>Online Profiling</span> bedeutet, dass Unternehmen genau diese Spuren sammeln, um etwas über dich herauszufinden, zum Beispiel was du magst und dich interessiert, aber auch <span>personenbezogene Daten</span>. Dieses Wissen können sie dann nutzen, zum Beispiel für gute Empfehlungen oder passende Werbung.</p>
+    <p class="paragraph">Hierbei arbeiten sie aber in ihrem Interesse, weshalb es für dich wichtig zu wissen ist, was mit deinen Daten passiert und wie du deine <span>Privatsphäre</span> schützen kannst.</p>
+    <p></p>
+    <p class="paragraph">Hier erfährst du, wie <span>Online Profiling</span> funktioniert und was du tun kannst, damit du die Kontrolle über deine Daten behältst.</p>
+    <div class="flex-container">
+    <div class="box">
+      <div class="box-inner">
+        <div class="box-front">
+          <h2>Cookies</h2>
+        </div>
+        <div class="box-back">
+            <h2>Cookies</h2>
+            <p>Speichern kleine Daten auf deinem Gerät, um dein Surfverhalten zu verfolgen und dich wiederzuerkennen. Sie helfen Webseiten, personalisierte Inhalte und Werbung anzuzeigen.</p>
+        </div>
+      </div>
+    </div>
+    
+
+
+    <div class="box">
+        <div class="box-inner">
+          <div class="box-front">
+            <h2>Tracking-Pixel</h2>
+          </div>
+          <div class="box-back">
+              <h2>Tracking-Pixel</h2>
+              <p>Unsichtbare Bilder, die beim Laden einer Webseite Informationen über dich senden. So können dein Besuch und Verhalten genau erfasst werden.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="box-inner">
+          <div class="box-front">
+            <h2>Device Fingerprinting</h2>
+          </div>
+          <div class="box-back">
+              <h2>Device Fingerprinting</h2>
+              <p>Erfasst viele technische Details deines Geräts, um es eindeutig zu identifizieren. Dadurch bist du auch ohne Cookies wiedererkennbar.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="box-inner">
+          <div class="box-front">
+            <h2>IP-Tracking</h2>
+          </div>
+          <div class="box-back">
+              <h2>IP-Tracking</h2>
+              <p>Nutzt deine IP-Adresse, um deinen Standort ungefähr zu bestimmen und dich zu identifizieren. So können Webseiten deinen Traffic analysieren.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="box-inner">
+          <div class="box-front">
+            <h2>Login-Daten</h2>
+          </div>
+          <div class="box-back">
+              <h2>Login-Daten</h2>
+              <p>Gespeicherte Anmeldedaten ermöglichen personalisierte Dienste und Verhaltensanalyse. Dabei ist Datenschutz besonders wichtig.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="box-inner">
+          <div class="box-front">
+            <h2>Suchverlauf</h2>
+          </div>
+          <div class="box-back">
+              <h2>Suchverlauf</h2>
+              <p>Suchmaschinen speichern deine Anfragen, um dir bessere Ergebnisse und Werbung zu zeigen. Gleichzeitig entsteht ein Nutzerprofil.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="box-inner">
+          <div class="box-front">
+            <h2>Cross-Device Tracking</h2>
+          </div>
+          <div class="box-back">
+              <h2>Cross-Device Tracking</h2>
+              <p>Verknüpft deine Nutzung auf verschiedenen Geräten, um dein Verhalten umfassend zu erfassen. Werbung kann so geräteübergreifend personalisiert werden.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="box-inner">
+          <div class="box-front">
+            <h2>Social Media Monitoring</h2>
+          </div>
+          <div class="box-back">
+              <h2>Social Media Monitoring</h2>
+              <p><span class="rick"><a href=https://youtu.be/xvFZjo5PgG0?feature=shared>Analysiert deine Aktivitäten auf sozialen Netzwerken wie Likes oder Kommentare. Das hilft Unternehmen, Trends zu erkennen und Werbung zu optimieren.</a></span></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="box-inner">
+          <div class="box-front">
+            <h2>Datenbroker</h2>
+          </div>
+          <div class="box-back">
+              <h2>Datenbroker</h2>
+              <p>Sammeln und verkaufen Daten aus verschiedenen Quellen, um Nutzerprofile zu erstellen. Diese Profile werden für Marketing oder andere Zwecke genutzt.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="box-inner">
+          <div class="box-front">
+            <h2>Geolocation</h2>
+          </div>
+          <div class="box-back">
+              <h2>Geolocation</h2>
+              <p>Bestimmt deinen Standort über GPS oder Netzwerke. Das ermöglicht ortsbezogene Dienste, birgt aber auch Datenschutzrisiken.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="box-inner">
+          <div class="box-front">
+            <h2>Retargeting</h2>
+          </div>
+          <div class="box-back">
+              <h2>Retargeting</h2>
+              <p>Zeigt dir Werbung für Produkte, die du bereits angesehen hast. So sollst du zum Kauf animiert werden.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h4 class="paragraph">Allgemein</h4> 
+
+   <ul>
+    <li class="paragraph"><span>Tracking-Technologien:</span> Cookies, Pixel sammeln Daten über dein Online-Verhalten</li>
+    <li class="paragraph"><span>Datenanalyse:</span> Algorithmen analysieren Muster in deinen Aktivitäten. (Datenquellen, Cross-Site Tracking)</li>
+    <li class="paragraph"><span>Maschinen lernen:</span> Systeme lernen, deine Vorlieben vorherzusagen</li>
+    <li class="paragraph"><span>Personalisierung:</span> Werbung wird basierend auf Interessen und Verhalten angezeigt</li>
+    <li class="paragraph"><span>Zielgerichtete Werbung:</span> Anzeigen, die du wahrscheinlich interessant findest, erscheinen</li>
+   </ul>
+    
+    <h4 class="paragraph">Funktion</h4>
+
+    <ul>
+        <li class="paragraph"><span>Daten sammeln:</span> Tracking-Tools (Cookies, Pixel) erfassen Nutzerverhalten</li>
+        <li class="paragraph"><span>Daten analysieren:</span> Algorithmen erkennen Muster und Interessen</li>
+        <li class="paragraph"><span>Profile erstellen:</span> Nutzer werden in Zielgruppen mit ähnlichen Interessen eingeteilt</li>
+        <li class="paragraph"><span>Personalisierte Werbung:</span> Anzeigen werden individuell angepasst und gezielt ausgespielt</li>
+    </ul>
+	
+    <h4 class="paragraph">Vorteile</h4>
+    
+    <ul>
+        <li class="paragraph"><span>Relevante Inhalte:</span> Nutzer sehen für sie interessante Werbung und Empfehlungen</li>
+        <li class="paragraph"><span>Bessere Nutzererfahrung:</span> Personalisierung verbessert Online-Angebote</li>
+        <li class="paragraph"><span>Effiziente Werbung:</span> Firmen sparen Kosten, weil Werbung gezielter ausgespielt wird</li>
+        <li class="paragraph"><span>Innovation:</span> Daten helfen bei Produktentwicklung und Marktforschung</li>
+        
+    </ul>
+
+    <h4 class="paragraph">Nachteile</h4>
+
+    <ul>
+        <li class="paragraph"><span>Datenschutzrisiken:</span> Persönliche Daten können missbraucht oder gehackt werden</li>
+        <li class="paragraph"><span>Intransparenz:</span> Nutzer wissen oft nicht, welche Daten gesammelt und wie sie genutzt werden</li>
+        <li class="paragraph"><span>Filterblasen:</span> Nutzer sehen nur Inhalte, die ihre Sichtweisen bestätigen</li>
+        <li class="paragraph"><span>Manipulation:</span> Werbung kann Verhalten beeinflussen oder Entscheidungen lenken</li>
+    </ul>
+
+    <h4 class="paragraph">Rechtliche Aspekte (Beispiel Europa - DSGVO)</h4>
+
+    <ul>
+        <li class="paragraph"><span>Einwilligungspflicht:</span> Nutzer müssen oft zustimmen, bevor Daten gesammelt werden (Cookie-Banner)</li>
+        <li class="paragraph"><span>Recht auf Auskunft:</span> Nutzer können erfahren, welche Daten gespeichert sind</li>
+        <li class="paragraph"><span>Recht auf Löschung:</span> Nutzer können verlangen, dass ihre Daten gelöscht werden</li>
+        <li class="paragraph"><span>Datenminimierung:</span> Es dürfen nur notwendige Daten gesammelt werden</li>
+        <li class="paragraph"><span>Transparenzpflicht:</span> Firmen müssen klar erklären, wie Daten genutzt werden</li>
+    </ul>
+ 
+    <h4 class="paragraph">Das kannst du tun</h4>
+
+    <ul>
+        <li class="paragraph">Nur Daten angeben, wenn es nötig ist</li>
+        <li class="paragraph">Informiere dich, wie welche deiner Daten von wem verarbeitet werden können, bevor du sie angibst</li>
+        <li class="paragraph">Verschlüsseln</li>
+        <li class="paragraph">Sichere Passwörter</li>
+        <li class="paragraph">VPN</li>
+        <li class="paragraph">Sicherheitsupdates machen</li>
+    </ul>
+
+    </div>
+  </body>
+  <footer>
+    <div class="footer-content">
+      © 2025 Schulprojekt Klasse 10 a/b · <a href="imprint.html">Impressum</a>
+    </div>
+  </footer>
+</html>
